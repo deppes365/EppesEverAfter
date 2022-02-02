@@ -1,0 +1,489 @@
+@font-face {
+    font-family: 'Angella White';
+    src: url(/fonts/angella-white.otf);
+}
+
+:root {
+    --primary-color: #FFFBE5;
+    --secondary-color: #426b69;
+    --angella-color: #549B4A;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    margin-top: 4rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 4rem;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+}
+
+.transparent-nav {
+    background-color: transparent;
+}
+
+.logo {
+    font-family: 'Poppins';
+    font-weight: 200;
+    font-size: 3rem;
+    color: var(--primary-color);
+    letter-spacing: 0.05em;
+}
+
+nav {
+    width: 50%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 0.25rem 0;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    border-bottom: 2px solid transparent;
+    transition: 0.5s ease;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.active {
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.fas.fa-bars {
+    display: none;
+}
+
+section {
+    position: inherit;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    min-height: calc(100vh - 4rem);
+    max-height: auto;
+    scroll-margin-top: 4rem;
+}
+
+
+
+/* Landing Styles */
+
+.landing {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(/images/EPM09945.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing h1, .landing h2, .landing p {
+    color: var(--primary-color);
+}
+
+.landing h1 {
+    margin-top: 4rem;
+    font-family: 'Sacramento';
+    font-weight: bold;
+    font-size: 7rem;
+    letter-spacing: 0.05em;
+}
+
+.landing h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.landing p {
+    font-size: 1.25rem;
+}
+
+/* Details Styles */
+
+.details {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.detail-card {
+    width: 30%;
+    height: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    border-radius: 50px;
+}
+
+.detail-card i {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.detail-card h1 {
+    display: inline-block;
+    width: 85%;
+    font-family: 'Sacramento';
+    font-size: 5rem;
+    font-weight: bolder;
+    letter-spacing: 0.05em;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.detail-card p {
+    margin-top: 1rem;
+}
+/* Destination Styles */
+
+.destination {
+    display: flex;
+    background-color: var(--secondary-color);
+}
+
+.st-john-photo {
+    flex-basis: 60%;
+    background-image: url(/images/stjohn.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.destination-content {
+    padding: 2rem;
+    flex-basis: 40%;
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.destination-content h1 {
+    font-family: 'Sacramento';
+    font-size: 5rem;
+    letter-spacing: 0.2rem;
+    border-bottom: 3px solid var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Travel Styles */
+
+.travel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.travel-content {
+    background-color: var(--secondary-color);
+    width: 85%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 50px;
+    padding: 2rem;
+}
+
+.travel-content > h1 {
+    width: 80%;
+    font-family: 'Angella White';
+    font-size: 7rem;
+    margin: 1rem 0 4rem 0;
+    color: var(--primary-color);
+    letter-spacing: 0.05em;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.air-shuttle {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    justify-self: center;
+}
+
+.air-shuttle i {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.air-shuttle h1 {
+    display: block;
+    font-size: 3rem;
+    letter-spacing: 0.05em;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.air-shuttle p {
+    color: var(--primary-color);
+}
+
+.flights {
+    flex-basis: 40%;
+    margin-left: 2rem;
+}
+
+.shuttle {
+    flex-basis: 40%;
+    margin-right: 2rem;
+}
+
+.flights button {
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    background-color: var(--primary-color);
+    transition: 0.2s ease;
+}
+
+.flights button:hover {
+    transform: scale(0.95);
+}
+
+.flights button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    
+}
+
+/* Bridal Party Styles */
+.bridal-party {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.bridal-party h1 {
+    font-family: 'Sacramento';
+    font-size: 5rem;
+    padding: 2rem 0;
+}
+
+.bridal-people {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 1rem;
+}
+
+.bridal-card {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 18rem;
+    width: 18rem;
+    align-items: center;
+    border: 5px solid var(--secondary-color);
+    border-radius: 25px;
+}
+
+.bridal-card img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    border: 5px solid var(--primary-color);
+}
+
+.bridal-info {
+   width: 100%; 
+}
+
+.bridal-info h1 {
+    font-family: 'Sacramento';
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+/* RSVP Styles */
+
+.rsvp {
+    display: flex;
+}
+
+.rsvp-img {
+    background-image: url(/images/EPM09774.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-basis: 75%;
+    content: '';
+}
+
+.rsvp h1 {
+    font-family: 'Sacramento';
+    font-size: 5rem;
+    padding: 2rem 0;
+}
+
+.rsvp-form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 252, 237, 0.8);
+    padding: 1rem;
+    width: 30rem;
+    height: auto;
+    border-radius: 30px;
+}
+
+.rsvp-form h1 {
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 0;
+    margin: 2rem;
+}
+
+
+.rsvp-form .plus-one-info {
+    border: none;
+    margin-top: 1rem;
+    display: flex;
+}
+
+.rsvp-form .names {
+    padding-bottom: 1rem;
+}
+
+.rsvp-form .names input {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid black;
+    margin: 0.5rem;
+    height: 2rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.rsvp-form .names input:active {
+    background-color: transparent;
+}
+
+.attending {
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+}
+
+.attending input {
+    margin: 1rem 1rem 0 0;
+}
+
+.plus-one {
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.plus-one-field {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    transition: 0.2s ease;
+}
+
+
+.plus-one input {
+    margin: 1rem 1rem 0 0;
+    background-color: transparent;
+    opacity: 0.8;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid black;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.hide-field {
+    display: none;
+}
+
+.rsvp-form button {
+    width: 7.5rem;
+    height: 3.5rem;
+    margin-top: 1.5rem;
+    outline: 0;
+    border: 0;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 30px;
+    transition: 0.2s ease;
+}
+
+.rsvp-form button:hover {
+    transform: scale(0.95);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    height: 4rem;
+    padding: 0 2rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+
+
+
